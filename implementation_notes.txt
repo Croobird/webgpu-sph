@@ -1,0 +1,16 @@
+Compute stage 1
+	- Calculate density
+	- Calculate pressure
+
+Compute stage 2
+	- Calculate forces
+		- Pressure
+		- Viscosity
+		- External (gravity)
+		- Total = Pressure + Viscosity + External
+
+Compute stage 3
+	- Leapfrog integration
+		- acceleration_i = total force / density_i
+		- velocity_i = velocity_i + time_step * acceleration_i  
+		- position_i = position_i + time_step * velocity_i
